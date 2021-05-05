@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.lewisu.laurenagernes.tictactoeai.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scores"
+        android:background="@color/primaryLightColorBlue"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/winScoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/pangolin_regular"
+            android:textSize="25sp"
+            tools:text="Wins: 1"
+            android:paddingStart="15dp"
+            android:layout_weight="2"/>
+        <TextView
+            android:id="@+id/drawScoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/pangolin_regular"
+            android:textSize="25sp"
+            android:layout_weight="2"
+            tools:text="Draws: 1"/>
+        <TextView
+            android:id="@+id/lossScoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/pangolin_regular"
+            android:textSize="25sp"
+            android:paddingEnd="15dp"
+            android:layout_gravity="end"
+            tools:text="Losses: 1"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/scores"
+        app:layout_constraintBottom_toTopOf="@id/tic_tac_toe_grid"
+        app:layout_constraintLeft_toLeftOf="@+id/tic_tac_toe_grid"
+        app:layout_constraintRight_toRightOf="@+id/tic_tac_toe_grid"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:text="@string/game_name"
+        android:fontFamily="@font/tictactoe_regular"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:useDefaultMargins="true"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:id="@+id/tic_tac_toe_grid"
+        style="@style/BackgroundGridView"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+        <ImageView
+            android:onClick="onGridImageViewClick"
+            style="@style/GridImageView" />
+        <ImageView
+            android:onClick="onGridImageViewClick"
+            style="@style/GridImageView" />
+        <ImageView
+            android:onClick="onGridImageViewClick"
+            style="@style/GridImageView" />
+        <ImageView
+            android:onClick="onGridImageViewClick"
+            style="@style/GridImageView" />
+        <ImageView
+            android:onClick="onGridImageViewClick"
+            style="@style/GridImageView" />
+        <ImageView
+            android:onClick="onGridImageViewClick"
+            style="@style/GridImageView" />
+        <ImageView
+            android:onClick="onGridImageViewClick"
+            style="@style/GridImageView" />
+        <ImageView
+            android:onClick="onGridImageViewClick"
+            style="@style/GridImageView" />
+        <ImageView
+            android:onClick="onGridImageViewClick"
+            style="@style/GridImageView" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/text_view_status"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginTop="40dp"
+        android:text="@string/loss_score"
+        android:visibility="gone"
+        android:fontFamily="@font/pangolin_regular"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tic_tac_toe_grid" />
+
+    <Button
+        android:id="@+id/button_new_game"
+        style="@style/GameOptionButton"
+        android:layout_marginTop="20dp"
+        android:text="@string/new_game"
+        android:onClick="onNewGameClick"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:fontFamily="@font/pangolin_regular"
+        app:layout_constraintTop_toBottomOf="@id/text_view_status" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

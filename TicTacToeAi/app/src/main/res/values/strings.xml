@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TicTacToeAI</string>
+    <string name="new_game">Retry?</string>
+    <string name="congrats">Congratulations!</string>
+
+    <string name="game_name">Tic Tac Toe</string>
+    <string name="start_game">Crush My Soul!</string>
+
+    <string name="game_won">You won!</string>
+    <string name="game_lost">You lost!</string>
+    <string name="game_tied">Cat\'s Game</string>
+
+    <string name="win_score">Wins: %1$d</string>
+    <string name="draw_score">Draws: %1$d</string>
+    <string name="loss_score">Losses: %1$d</string>
+
+    <string name="slogan">All you need is a battery, a phone, and your lonely self!</string>
+
+</resources>
